@@ -9,15 +9,13 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    hot: true,
     contentBase: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'Output Management'
-    }),
-    new webpack.HotModuleReplacementPlugin()
+    })
   ],
   output: {
     filename: '[name].bundle.js',
